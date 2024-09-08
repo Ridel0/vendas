@@ -3,91 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Online</title>
+    <title>Login e Cadastro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1><span>z</span>library</h1>
-            <p>Your gateway to knowledge and culture. Accessible for everyone.</p>
+    <div class="container">
+        <div class="form-container" id="login-form">
+            <h2>Login</h2>
+            <form id="login">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Senha:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Entrar</button>
+                <p>Não tem uma conta? <a href="#" id="show-register">Cadastre-se</a></p>
+            </form>
         </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search for title, author, ISBN, publisher, md5...">
-            <button>Search</button>
+        <div class="form-container" id="register-form" style="display: none;">
+            <h2>Cadastro</h2>
+            <form id="register">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-password">Senha:</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Cadastrar</button>
+                <p>Já tem uma conta? <a href="#" id="show-login">Entrar</a></p>
+            </form>
         </div>
-    </header>
-
-    <section class="popular-books">
-        <h2>Most Popular</h2>
-        <div class="book-covers">
-            <a href="link-to-book-1.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 1"></a>
-            <a href="link-to-book-2.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 2"></a>
-            <a href="link-to-book-3.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 3"></a>
-            <a href="link-to-book-5.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 5"></a>
-            <a href="link-to-book-6.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 6"></a>
-            <a href="link-to-book-7.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 7"></a>
-            <a href="link-to-book-8.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 8"></a>
-            <a href="link-to-book-9.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 9"></a>
-            <a href="link-to-book-10.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 10"></a>
-            <a href="link-to-book-11.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 11"></a>
-            <a href="link-to-book-12.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 12"></a>
-            <a href="link-to-book-13.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 13"></a>
-            <a href="link-to-book-14.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 14"></a>
-            <a href="link-to-book-15.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 15"></a>
-            <a href="link-to-book-16.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 16"></a>
-            <a href="link-to-book-17.html"><img src="imagens/as 48 leis do poder.jpg" alt="Book 17"></a>
-        </div>
-    </section>
-
-    <footer>
-        <p>Share with the world</p>
-        <div class="social-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="#"><img src="email-icon.png" alt="Email"></a>
-        </div>
-    </footer>
-</body>
-</html>
-<!-- Modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Welcome to zlibrary!</h2>
-        <p>Explore our extensive collection of books and enjoy your reading journey.</p>
-        <!-- Imagem clicável -->
-        <a href="link-to-image.html" class="modal-image-link">
-            <img src="imagens/as 48 leis do poder.jpg" alt="Image">
-        </a>
     </div>
-</div>
-
-<script>
-    // Function to show the modal
-    function showModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "block";
-    }
-
-    // Function to hide the modal
-    function hideModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    }
-
-    // Show the modal after 5 seconds
-    setTimeout(showModal, 5000);
-
-    // Get the close button element
-    var closeButton = document.querySelector(".modal .close");
-
-    // Close the modal when the close button is clicked
-    closeButton.onclick = function() {
-        hideModal();
-    }
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
