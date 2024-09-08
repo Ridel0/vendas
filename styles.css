@@ -1,196 +1,67 @@
-/* Configurações gerais para o tema dark */
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Cor de fundo escura */
-    color: #e0e0e0; /* Cor do texto clara */
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #1f1f1f; /* Fundo escuro para o cabeçalho */
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #333; /* Borda sutil */
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 36px;
-    font-weight: bold;
-    color: #e24a4a; /* Cor do título */
-}
-
-header .logo h1 span {
-    color: #d68d8d; /* Cor do span no título */
-}
-
-header .logo p {
-    font-size: 16px;
-    color: #b0b0b0; /* Cor do texto do cabeçalho */
-    margin-top: 5px;
-}
-
-.search-container {
-    margin-top: 20px;
-}
-
-.search-container input[type="text"] {
-    width: 60%;
-    padding: 10px;
-    border: 1px solid #444; /* Borda escura para o campo de busca */
-    border-radius: 5px;
-    background-color: #333; /* Fundo escuro para o campo de busca */
-    color: #e0e0e0; /* Texto claro no campo de busca */
-}
-
-.search-container button {
-    padding: 10px 20px;
-    background-color: #e24a4a; /* Cor do botão */
-    border: none;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-container button:hover {
-    background-color: #b30000; /* Cor do botão ao passar o mouse */
-}
-
-/* Seção de livros populares */
-.popular-books {
-    padding: 20px;
-    background-color: #1f1f1f; /* Fundo escuro para a seção de livros */
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
-    border-radius: 8px;
-}
-
-.popular-books h2 {
-    font-size: 24px;
-    color: #e24a4a; /* Cor do título */
-    margin-bottom: 20px;
-}
-
-.book-covers {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre as imagens */
-    justify-content: center; /* Centraliza as imagens */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
 }
 
-.book-covers a {
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 300px;
+    margin: auto;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
     display: block;
-    flex: 1 1 calc(50% - 20px); /* Ajusta a largura das imagens para duas colunas */
-    max-width: 150px; /* Largura máxima das imagens */
+    margin-top: 10px;
 }
 
-.book-covers img {
-    width: 100%; /* Faz a imagem preencher o contêiner */
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-/* Media query para ajustar a quantidade de livros por fileira */
-@media (max-width: 900px) {
-    .book-covers a {
-        flex: 1 1 calc(50% - 20px); /* Duas colunas até 900px de largura */
-    }
-}
-
-@media (max-width: 600px) {
-    .book-covers a {
-        flex: 1 1 calc(100% - 20px); /* Uma coluna para telas menores que 600px */
-    }
-}
-
-footer {
-    background-color: #1f1f1f; /* Fundo escuro para o rodapé */
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #333; /* Borda sutil */
-}
-
-footer p {
-    font-size: 14px;
-    color: #b0b0b0; /* Cor do texto do rodapé */
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-icons img {
-    width: 25px;
-}
-
-/* Estilos para o Modal */
-.modal {
-    display: none; /* Oculta o modal por padrão */
-    position: fixed; /* Fixa o modal na tela */
-    z-index: 1; /* Garante que o modal esteja acima do conteúdo */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largura total da tela */
-    height: 100%; /* Altura total da tela */
-    overflow: auto; /* Adiciona rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-}
-
-.modal-content {
-    background-color: #1e1e1e; /* Fundo escuro para o conteúdo do modal */
-    margin: 15% auto; /* Centraliza o modal */
-    padding: 20px;
-    border: 1px solid #333; /* Borda escura para o conteúdo */
-    width: 80%; /* Largura do modal */
-    max-width: 600px; /* Largura máxima do modal */
-    border-radius: 10px;
-    text-align: center; /* Centraliza o texto e imagens */
-}
-
-.close {
-    color: #ccc; /* Cor do botão de fechar */
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff; /* Cor do botão de fechar ao passar o mouse */
-    text-decoration: none;
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.modal-image-link {
-    display: block;
-    margin: 20px auto; /* Espaço ao redor da imagem */
+button:hover {
+    background-color: #218838;
 }
 
-.modal-image-link img {
-    width: 150px; /* Largura menor da imagem */
-    height: auto;
-    border: 1px solid #444; /* Borda escura para a imagem */
-    border-radius: 5px;
-    animation: pulse 2s infinite; /* Adiciona animação de pulsação */
+p {
+    margin-top: 10px;
 }
 
-/* Animação de pulsação */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.modal-image-link img:hover {
-    transform: scale(1.1);
+a:hover {
+    text-decoration: underline;
 }
